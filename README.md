@@ -4,7 +4,7 @@ A comprehensive collection of Claude Code skills for modern Android development 
 
 ## Overview
 
-이 프로젝트는 안드로이드 개발을 위한 26개의 모듈화된 스킬을 제공합니다. 각 스킬은 작고 독립적이며, Claude가 작업 컨텍스트에 따라 자동으로 조합하여 사용할 수 있도록 설계되었습니다.
+이 프로젝트는 안드로이드 개발을 위한 32개의 모듈화된 스킬을 제공합니다. 각 스킬은 작고 독립적이며, Claude가 작업 컨텍스트에 따라 자동으로 조합하여 사용할 수 있도록 설계되었습니다.
 
 ## Skills Catalog
 
@@ -41,6 +41,13 @@ A comprehensive collection of Claude Code skills for modern Android development 
 | **android-networking-retrofit** | Retrofit API 통신, OkHttp, 에러 핸들링 |
 | **android-datastore** | DataStore 설정 저장, Preferences, Proto DataStore |
 
+### 📄 JSON Parsing (2 skills)
+
+| Skill | Description |
+|-------|-------------|
+| **android-json-moshi** | Moshi JSON 파싱, 커스텀 어댑터, Retrofit 통합 |
+| **android-json-kotlinx** | Kotlin Serialization, 컴파일타임 안전성, 멀티플랫폼 지원 |
+
 ### 🔄 State Management (2 skills)
 
 | Skill | Description |
@@ -56,12 +63,14 @@ A comprehensive collection of Claude Code skills for modern Android development 
 | **android-workmanager** | WorkManager 백그라운드 작업, 주기적 동기화 |
 | **android-paging3** | Paging 3 페이지네이션, 무한 스크롤 |
 
-### 🧪 Testing (2 skills)
+### 🧪 Testing (4 skills)
 
 | Skill | Description |
 |-------|-------------|
 | **android-compose-testing** | Compose UI 테스트, Semantics, ComposeTestRule |
-| **android-unit-testing** | Unit 테스트, JUnit, MockK, Coroutine 테스트 |
+| **android-unit-testing** | Unit 테스트, JUnit, Coroutine 테스트 |
+| **android-testing-mockk** | MockK 모킹 프레임워크, 코루틴 지원, DSL 문법 |
+| **android-testing-turbine** | Turbine Flow 테스팅, awaitItem(), StateFlow 테스트 |
 
 ### ⚙️ Build Configuration (1 skill)
 
@@ -78,6 +87,18 @@ A comprehensive collection of Claude Code skills for modern Android development 
 | **android-forms-validation** | 폼 검증, 실시간 유효성 검사 |
 | **android-list-ui** | LazyColumn, LazyGrid, RecyclerView 리스트 UI |
 | **android-material-components** | Material Design 3 컴포넌트 (Button, Card, Dialog 등) |
+
+### 🛠️ Utilities (1 skill)
+
+| Skill | Description |
+|-------|-------------|
+| **android-logging-timber** | Timber 로깅 라이브러리, 커스텀 Tree, 환경별 로깅 전략 |
+
+### 🎬 Animation (1 skill)
+
+| Skill | Description |
+|-------|-------------|
+| **android-animation-lottie** | Lottie 애니메이션, Adobe After Effects 통합, JSON 애니메이션 |
 
 ## How It Works
 
@@ -122,11 +143,14 @@ Claude가 자동으로 로드하는 스킬:
 - **DI**: Hilt 2.51
 - **Database**: Room 2.6.1
 - **Networking**: Retrofit 2.11.0 + OkHttp 4.12.0
+- **JSON**: Moshi 1.15.1, Kotlinx Serialization 1.7.3
 - **Async**: Kotlin Coroutines + StateFlow
 - **Navigation**: Navigation Compose 2.8.5
 - **Image Loading**: Coil 3.0.4
+- **Animation**: Lottie 6.5.2
+- **Logging**: Timber 5.0.1
 - **Build**: Gradle Kotlin DSL 8.7.3
-- **Testing**: JUnit, MockK, Compose Test
+- **Testing**: JUnit, MockK 1.13.13, Turbine 1.1.0, Compose Test
 
 ## Project Structure
 
@@ -182,7 +206,19 @@ Claude가 자동으로 로드하는 스킬:
 │   └── SKILL.md
 ├── android-list-ui/
 │   └── SKILL.md
-└── android-material-components/
+├── android-material-components/
+│   └── SKILL.md
+├── android-json-moshi/
+│   └── SKILL.md
+├── android-json-kotlinx/
+│   └── SKILL.md
+├── android-testing-mockk/
+│   └── SKILL.md
+├── android-testing-turbine/
+│   └── SKILL.md
+├── android-logging-timber/
+│   └── SKILL.md
+└── android-animation-lottie/
     └── SKILL.md
 ```
 
