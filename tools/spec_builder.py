@@ -221,6 +221,28 @@ class AndroidSkillMatcher:
             "category": "Animation",
             "description": "Lottie animations"
         },
+
+        # Git Workflow
+        "android-git-atomic-commits": {
+            "keywords": ["git", "commit", "atomic", "conventional", "traceability", "small commits"],
+            "category": "Git",
+            "description": "Atomic commits with conventional format"
+        },
+        "android-git-spec-workflow": {
+            "keywords": ["git", "spec", "workflow", "branch", "feature branch", "pull request"],
+            "category": "Git",
+            "description": "SPEC-First git workflow"
+        },
+        "android-git-conventional-commits": {
+            "keywords": ["git", "conventional", "commit message", "changelog", "semantic versioning"],
+            "category": "Git",
+            "description": "Conventional commit format"
+        },
+        "android-git-multi-commit-feature": {
+            "keywords": ["git", "split", "multi commit", "refactor", "large feature", "code review"],
+            "category": "Git",
+            "description": "Split features into commits"
+        },
     }
 
     def match_skills(self, feature_description: str, requirements: List[str]) -> List[str]:

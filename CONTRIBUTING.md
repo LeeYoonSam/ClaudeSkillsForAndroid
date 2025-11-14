@@ -42,7 +42,7 @@
 cladue-skills/
 ├── .claude/
 │   ├── settings.local.json          # Claude Code 설정
-│   └── skills/                      # Android skills (26개)
+│   └── skills/                      # Android skills (36개)
 │       └── android-*/               # 각 skill 디렉토리
 │           └── SKILL.md             # Skill 문서
 ├── specs/                           # SPEC 문서
@@ -166,16 +166,62 @@ fun loginWithValidCredentialsReturnsSuccess() {
 
 ### 7. 커밋
 
-의미 있는 커밋 메시지를 작성합니다:
+의미 있는 커밋 메시지를 작성합니다.
+
+**Git Skills 참조:**
+- `android-git-atomic-commits` - Atomic commit 작성법
+- `android-git-spec-workflow` - SPEC-First git 워크플로우
+- `android-git-conventional-commits` - Conventional commit 형식
+- `android-git-multi-commit-feature` - 큰 기능을 작은 커밋으로 분할
+
+**커밋 예시:**
 
 ```bash
-git add .
-git commit -m "feat(SPEC-001): Implement user authentication
+# Layer별로 atomic commit 작성
+git add domain/
+git commit -m "feat(SPEC-001): Implement domain layer
 
-- Add AuthRepository with login/logout methods
-- Implement JWT token management
-- Add unit tests for AuthRepository
-- Update SPEC-001 traceability matrix
+- Add User model and AuthToken
+- Create AuthRepository interface
+- Add LoginUseCase and LogoutUseCase
+
+Refs: SPEC-001, REQ-001-U-01, REQ-001-U-02"
+
+git add data/
+git commit -m "feat(SPEC-001): Implement data layer
+
+- Add AuthApi for network calls
+- Implement AuthRepositoryImpl
+- Add JWT token storage with DataStore
+
+Refs: SPEC-001, REQ-001-U-03"
+
+git add presentation/
+git commit -m "feat(SPEC-001): Implement presentation layer
+
+- Create AuthViewModel with state management
+- Define AuthActions and AuthEvents
+
+Refs: SPEC-001, REQ-001-E-01"
+
+git add test/
+git commit -m "test(SPEC-001): Add authentication tests
+
+- Unit tests for use cases and repository
+- ViewModel tests with MockK and Turbine
+- UI tests with Compose Test
+- Coverage: 92%
+
+Refs: SPEC-001"
+
+git add docs/ specs/
+git commit -m "docs(SPEC-001): Update documentation
+
+- Sync traceability matrix
+- Update README with authentication guide
+- Add architecture diagram
+
+Refs: SPEC-001
 
 Refs: SPEC-001, REQ-001-U-01, REQ-001-U-02"
 ```

@@ -4,7 +4,7 @@ A comprehensive collection of Claude Code skills for modern Android development 
 
 ## Overview
 
-이 프로젝트는 안드로이드 개발을 위한 32개의 모듈화된 스킬을 제공합니다. 각 스킬은 작고 독립적이며, Claude가 작업 컨텍스트에 따라 자동으로 조합하여 사용할 수 있도록 설계되었습니다.
+이 프로젝트는 안드로이드 개발을 위한 36개의 모듈화된 스킬을 제공합니다. 각 스킬은 작고 독립적이며, Claude가 작업 컨텍스트에 따라 자동으로 조합하여 사용할 수 있도록 설계되었습니다.
 
 ## Skills Catalog
 
@@ -99,6 +99,15 @@ A comprehensive collection of Claude Code skills for modern Android development 
 | Skill | Description |
 |-------|-------------|
 | **android-animation-lottie** | Lottie 애니메이션, Adobe After Effects 통합, JSON 애니메이션 |
+
+### 🔀 Git Workflow (4 skills)
+
+| Skill | Description |
+|-------|-------------|
+| **android-git-atomic-commits** | Atomic commit 작성, Conventional commit 형식, SPEC 추적성 |
+| **android-git-spec-workflow** | SPEC-First git 워크플로우, 브랜치 전략, PR 생성 |
+| **android-git-conventional-commits** | Conventional commit 검증, Changelog 자동 생성, Semantic versioning |
+| **android-git-multi-commit-feature** | 큰 기능을 논리적 커밋으로 분할, 코드 리뷰 최적화 |
 
 ## How It Works
 
@@ -218,7 +227,15 @@ Claude가 자동으로 로드하는 스킬:
 │   └── SKILL.md
 ├── android-logging-timber/
 │   └── SKILL.md
-└── android-animation-lottie/
+├── android-animation-lottie/
+│   └── SKILL.md
+├── android-git-atomic-commits/
+│   └── SKILL.md
+├── android-git-spec-workflow/
+│   └── SKILL.md
+├── android-git-conventional-commits/
+│   └── SKILL.md
+└── android-git-multi-commit-feature/
     └── SKILL.md
 ```
 
