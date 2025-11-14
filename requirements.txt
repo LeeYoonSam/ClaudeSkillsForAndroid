@@ -1,0 +1,39 @@
+# SPEC-First Development System - Python Dependencies
+# Version: 1.0.0
+# Last Updated: 2025-11-14
+
+# Core Dependencies
+pyyaml>=6.0.1          # YAML parsing for frontmatter
+markdown>=3.5.1        # Markdown processing
+jinja2>=3.1.2          # Template rendering for code generation
+
+# Code Analysis & AST Parsing
+tree-sitter>=0.20.4    # Multi-language AST parsing
+tree-sitter-kotlin>=0.3.0  # Kotlin AST support
+tree-sitter-java>=0.20.2   # Java AST support
+
+# CLI & User Interface
+click>=8.1.7           # Command-line interface
+rich>=13.7.0           # Rich terminal formatting
+prompt-toolkit>=3.0.43 # Interactive prompts
+
+# File Operations
+pathlib>=1.0.1         # Path manipulation
+watchdog>=3.0.0        # File system monitoring
+
+# Testing
+pytest>=7.4.3          # Testing framework
+pytest-cov>=4.1.0      # Coverage reporting
+
+# Code Quality
+black>=23.12.0         # Python code formatting
+ruff>=0.1.8            # Fast Python linter
+mypy>=1.7.1            # Type checking
+
+# Documentation
+mkdocs>=1.5.3          # Documentation generator
+mkdocs-material>=9.5.2 # Material theme
+
+# Utilities
+python-dateutil>=2.8.2 # Date/time utilities
+colorama>=0.4.6        # Cross-platform colored terminal text
