@@ -1,10 +1,121 @@
-# Android Development Skills for Claude Code
+# 🤖 Android AI Development Kit (AIDK)
 
-A comprehensive collection of Claude Code skills for modern Android development with Kotlin, Jetpack Compose, MVVM, and Clean Architecture.
+A comprehensive SPEC-First Android development framework with 36 specialized skills, AI-powered automation tools, and seamless Claude Code integration.
 
 ## Overview
 
-이 프로젝트는 안드로이드 개발을 위한 36개의 모듈화된 스킬을 제공합니다. 각 스킬은 작고 독립적이며, Claude가 작업 컨텍스트에 따라 자동으로 조합하여 사용할 수 있도록 설계되었습니다.
+**Android AI Development Kit**은 현대적인 Android 개발을 위한 완전한 개발 프레임워크입니다:
+
+- **36개 전문 스킬**: Jetpack Compose, Clean Architecture, MVVM, DI, Testing 등
+- **SPEC-First 개발**: AI 기반 자동 SPEC 생성 및 검증
+- **자동 코드 생성**: Clean Architecture 코드 자동 생성
+- **문서 동기화**: SPEC-코드-문서 자동 동기화
+- **Claude Code 통합**: 완벽한 IDE 통합
+
+## 🚀 Quick Start
+
+### Installation
+
+#### Option 1: Install from PyPI (Recommended)
+
+```bash
+# Install globally
+pip install android-ai-devkit
+
+# Install skills to your Android project
+cd your-android-project
+aidk install --local
+```
+
+#### Option 2: Install from Source
+
+```bash
+# Clone repository
+git clone https://github.com/yourusername/android-ai-devkit.git
+cd android-ai-devkit
+
+# Install
+pip install -e .
+
+# Or use installation script
+./install.sh        # Unix/Mac
+# or
+install.ps1         # Windows
+```
+
+### First Steps
+
+1. **Create your first SPEC:**
+```bash
+aidk spec create "User Authentication Feature"
+```
+
+2. **Generate code from SPEC:**
+```bash
+aidk code generate specs/SPEC-001/SPEC.md --output ./src --package com.example.app
+```
+
+3. **Synchronize documentation:**
+```bash
+aidk docs sync specs/SPEC-001/SPEC.md --code ./src
+```
+
+4. **List available skills:**
+```bash
+aidk skills
+```
+
+## 📚 CLI Commands
+
+### Installation & Updates
+```bash
+aidk install --local              # Install skills to current project
+aidk install --local --with-examples  # Include example SPECs
+aidk update                       # Check for and install updates
+aidk version                      # Show version information
+aidk info                         # Display system information
+```
+
+### SPEC Management
+```bash
+aidk spec create "Feature Name"   # Create new SPEC (quick mode)
+aidk spec create -i               # Interactive SPEC creation
+aidk spec validate SPEC.md        # Validate SPEC document
+```
+
+### Code Generation
+```bash
+aidk code generate SPEC.md                     # Generate code
+aidk code generate SPEC.md -o ./app -p com.app  # Custom output & package
+```
+
+### Documentation
+```bash
+aidk docs sync SPEC.md --code ./src   # Sync documentation
+aidk docs verify SPEC.md --code ./src # Verify SPEC-code alignment
+```
+
+### Skills
+```bash
+aidk skills                       # List all available skills
+```
+
+## 📦 What's Included
+
+### Python Automation Tools
+- **spec_builder.py**: AI-powered SPEC generation with EARS format
+- **code_builder.py**: Clean Architecture code generation
+- **doc_syncer.py**: Documentation synchronization
+- **validate_specs.py**: SPEC validation
+
+### SPEC Templates
+- Feature specification template
+- API specification template
+- UI specification template
+
+### Example Projects
+- User Authentication (complete SPEC + generated code)
+- Product Catalog (complete SPEC + generated code)
 
 ## Skills Catalog
 
